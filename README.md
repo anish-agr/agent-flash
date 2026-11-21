@@ -19,7 +19,7 @@ through, and pressing a key or clicking fades it early.
 | Approval | `#8B2FCE` | A tool call is waiting for your permission |
 | Error | `#FF3B30` | A turn ends in an API error |
 
-Approval fires only when Claude Code actually shows a permission dialog. Calls
+Approval fires only when Claude Code shows a permission dialog. Calls
 allowed by your permission mode or your rules never flash.
 
 A question or an approval stays open until Claude moves on, so `flash status`, the
@@ -363,13 +363,12 @@ Codex raises the finished-turn and approval signals and keeps `flash status`
 up to date. It has no equivalent of Claude Code's `AskUserQuestion` tool or of
 `StopFailure`, so the question and error signals stay Claude Code's.
 
-How far this is confirmed, as of Codex 0.164: Codex reads and validates the file
-Agent Flash writes, down to clamping a timeout it thinks is too long, and reports no
-complaint about it. Hooks did not run in a non-interactive `codex exec` run, though,
-so check an interactive session before relying on it: start Codex, let a turn finish,
-and run `flash log --since 5m --all`. An entry means the hooks are arriving. Nothing
-there means your Codex does not run them yet, and `flash hooks codex --dry-run`
-shows what was written so you can compare it with your version's documentation.
+Tested against Codex 0.164, which reads and validates the file, down to clamping a
+timeout it thinks too long. Its hooks did not run in a non-interactive `codex exec`
+run, so check an interactive one before relying on them. Start Codex, let a turn
+finish, then run `flash log --since 5m --all`: an entry means events are arriving,
+and nothing there means your version of Codex does not run them. `flash hooks codex
+--dry-run` prints the file for comparing against your version's documentation.
 
 ### From another machine
 
