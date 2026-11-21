@@ -29,12 +29,18 @@ replies.
 
 ## 1. Install
 
-With Homebrew on macOS or Scoop on Windows, installing takes two commands. First
-one of these:
+With Homebrew on macOS, point it at this repository, which is its own tap, and then
+install:
 
 ```bash
-brew install anish-agr/tap/agent-flash
+brew tap anish-agr/agent-flash https://github.com/anish-agr/agent-flash
 ```
+
+```bash
+brew install agent-flash
+```
+
+With Scoop on Windows, one command:
 
 ```powershell
 scoop install https://raw.githubusercontent.com/anish-agr/agent-flash/main/packaging/scoop/agent-flash.json
