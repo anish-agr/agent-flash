@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Points the Scoop manifest, the Homebrew formula and the WinGet manifests at a
-# published release, using the checksums the release workflow uploaded.
+# published release, using the checksums the release workflow uploaded. This
+# repository is its own Homebrew tap, so the formula needs no copying anywhere.
 #
 #   scripts/update-packages.sh 2.2.0
 set -euo pipefail
@@ -28,8 +29,8 @@ sed -i.bak -E \
 sed -i.bak -E \
   -e "s#/download/v[0-9][^/]*/#/download/v$version/#" \
   -e "s/sha256 \"[0-9a-f]{64}\"/sha256 \"$macos\"/" \
-  "$root/packaging/homebrew/agent-flash.rb"
-rm -f "$root/packaging/scoop/agent-flash.json.bak" "$root/packaging/homebrew/agent-flash.rb.bak"
+  "$root/HomebrewFormula/agent-flash.rb"
+rm -f "$root/packaging/scoop/agent-flash.json.bak" "$root/HomebrewFormula/agent-flash.rb.bak"
 
 # WinGet wants the checksum in upper case and carries the version in all three files.
 windows_upper="$(printf '%s' "$windows" | tr 'a-f' 'A-F')"
@@ -46,5 +47,4 @@ for manifest in "$root"/packaging/winget/*.yaml; do
 done
 
 echo "Scoop, Homebrew and WinGet manifests now point at v$version."
-echo "Copy packaging/homebrew/agent-flash.rb to Formula/agent-flash.rb in anish-agr/homebrew-tap."
 echo "For WinGet, see packaging/README.md."

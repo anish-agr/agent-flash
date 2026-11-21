@@ -41,10 +41,15 @@ Each block is one command.
 
 ### With Homebrew or Scoop
 
-On macOS, with [Homebrew](https://brew.sh):
+On macOS, with [Homebrew](https://brew.sh). This repository is its own tap, so the
+first line points Homebrew at it and the second installs:
 
 ```bash
-brew install anish-agr/tap/agent-flash
+brew tap anish-agr/agent-flash https://github.com/anish-agr/agent-flash
+```
+
+```bash
+brew install agent-flash
 ```
 
 On Windows, with [Scoop](https://scoop.sh):

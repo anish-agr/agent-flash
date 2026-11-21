@@ -2,12 +2,15 @@
 
 | Folder | Package manager | Where it is published |
 |---|---|---|
-| `homebrew` | Homebrew, macOS | Copied to `Formula/agent-flash.rb` in [anish-agr/homebrew-tap](https://github.com/anish-agr/homebrew-tap) |
 | `scoop` | Scoop, Windows | Read straight from this repository, by URL |
 | `winget` | WinGet, Windows | A pull request to [microsoft/winget-pkgs](https://github.com/microsoft/winget-pkgs) |
 
+The Homebrew formula is not here: it sits in `HomebrewFormula/` at the top of the
+repository, because Homebrew reads a tap's formulae from there and this repository is
+its own tap.
+
 `scripts/update-packages.sh VERSION` points all of them at a published release.
-Homebrew and Scoop need nothing else described here; WinGet does.
+Scoop and Homebrew need nothing else described here; WinGet does.
 
 ## WinGet
 

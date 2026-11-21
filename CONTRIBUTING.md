@@ -8,7 +8,8 @@
 | `crates/agent-flash` | The `flash` CLI and the `flash-agent` background process: HTTP server, runtime, journal, and the Windows and macOS front ends. |
 | `spec/scenarios` | The engine's behaviour, as JSON scenarios run by `crates/flash-core/tests/scenarios.rs`. |
 | `docs` | Reference documentation. |
-| `packaging` | The Homebrew formula, the Scoop manifest and the WinGet manifests. |
+| `HomebrewFormula` | The Homebrew formula. This repository is its own tap, so Homebrew reads it from here. |
+| `packaging` | The Scoop manifest and the WinGet manifests. |
 | `scripts/update-packages.sh` | Points all of them at a published release. |
 
 ## Checks
@@ -77,14 +78,10 @@ Commit messages follow [Conventional Commits](https://www.conventionalcommits.or
    scripts/update-packages.sh 2.2.0
    ```
 
-4. Copy `packaging/homebrew/agent-flash.rb` to `Formula/agent-flash.rb` in
-   [anish-agr/homebrew-tap](https://github.com/anish-agr/homebrew-tap). Scoop reads
-   the manifest straight from this repository.
-
-5. Submit the WinGet manifests, as
+4. Submit the WinGet manifests, as
    [packaging/README.md](packaging/README.md) describes.
 
-6. While the Windows programs are unsigned, submit `flash.exe` and
+5. While the Windows programs are unsigned, submit `flash.exe` and
    `flash-agent.exe` from the release zip to Microsoft at
    [the file submission portal](https://www.microsoft.com/en-us/wdsi/filesubmission),
    as a software developer. It is the only route for disputing how an unsigned

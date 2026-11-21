@@ -4,6 +4,20 @@ Notable changes to Agent Flash. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and versions follow
 [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Changed
+
+- The Homebrew formula moved into this repository, at `HomebrewFormula/`, so there is
+  no separate tap repository to keep in step. Installing takes one more line, because
+  only the `homebrew-` prefixed repository name works with the short form of
+  `brew tap`:
+
+  ```bash
+  brew tap anish-agr/agent-flash https://github.com/anish-agr/agent-flash
+  brew install agent-flash
+  ```
+
 ## [3.0.0] - 2026-11-20
 
 ### Added
