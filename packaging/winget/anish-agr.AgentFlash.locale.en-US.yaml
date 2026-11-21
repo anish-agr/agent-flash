@@ -39,7 +39,7 @@ Documentations:
   - DocumentLabel: Configuration
     DocumentUrl: https://github.com/anish-agr/agent-flash/blob/main/docs/configuration.md
 InstallationNotes: |-
-  Run `flash install` to add the Claude Code hooks and start the agent, now and at
+  Run `flash install` to add the hooks and start the agent, now and at
   every login. Restart any Claude Code session that is already open. Before
   `winget uninstall`, run `flash uninstall` to take the hooks out again.
 ManifestType: defaultLocale

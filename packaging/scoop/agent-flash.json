@@ -11,7 +11,7 @@
     },
     "bin": "flash.exe",
     "notes": [
-        "To add the Claude Code hooks and start the agent, now and at every login, run: flash install",
+        "To add the hooks and start the agent, now and at every login, run: flash install",
         "To update: flash agent stop, then scoop update agent-flash, then flash agent start",
         "Before scoop uninstall agent-flash, run: flash uninstall"
     ],

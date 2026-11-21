@@ -13,7 +13,7 @@ class AgentFlash < Formula
 
   def caveats
     <<~EOS
-      To add the Claude Code hooks and start the agent, now and at every login:
+      To add the hooks and start the agent, now and at every login:
         flash install
       After `brew upgrade agent-flash`, restart the agent:
         flash agent restart
