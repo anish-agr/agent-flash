@@ -1,8 +1,8 @@
 class AgentFlash < Formula
   desc "Screen flashes when your coding agent finishes, asks, needs approval or fails"
   homepage "https://github.com/anish-agr/agent-flash"
-  url "https://github.com/anish-agr/agent-flash/releases/download/v2.2.0/agent-flash-macos-universal.tar.gz"
-  sha256 "7204b9a1b14d6d419622a9aa642fc0e009122b2aeca1a56228ac54dc6c0523b8"
+  url "https://github.com/anish-agr/agent-flash/releases/download/v3.0.0/agent-flash-macos-universal.tar.gz"
+  sha256 "94dee8a0bee0508e4026458ab7ea9688be0bc8ca1c7b757f6413e1b09d9254c8"
   license "MIT"
 
   depends_on :macos

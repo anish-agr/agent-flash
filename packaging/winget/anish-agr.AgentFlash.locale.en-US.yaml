@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://aka.ms/winget-manifest.defaultLocale.1.6.0.schema.json
 
 PackageIdentifier: anish-agr.AgentFlash
-PackageVersion: 2.2.0
+PackageVersion: 3.0.0
 PackageLocale: en-US
 Publisher: anish-agr
 PublisherUrl: https://github.com/anish-agr
@@ -32,7 +32,7 @@ Tags:
   - overlay
   - rust
   - terminal
-ReleaseNotesUrl: https://github.com/anish-agr/agent-flash/releases/tag/v2.2.0
+ReleaseNotesUrl: https://github.com/anish-agr/agent-flash/releases/tag/v3.0.0
 Documentations:
   - DocumentLabel: Getting started
     DocumentUrl: https://github.com/anish-agr/agent-flash/blob/main/docs/getting-started.md
